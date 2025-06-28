@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="mb-4">
             <div className="flex justify-center mb-4">
               <img
-                src="/lovable-uploads/icons/f8cc8309-39fc-49a7-b838-fe054c61a16d.png"
+                src="/lovable-uploads/icons/logo_black.png"
                 alt="GT GlobalTeam Logo"
                 className="rounded-[50%] w-16 h-16 object-contain"
               />

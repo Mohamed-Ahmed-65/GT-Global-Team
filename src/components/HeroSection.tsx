@@ -22,7 +22,7 @@ const HeroSection = () => {
           <div className="mb-8">
             <div className="flex justify-center mb-6">
               <img 
-                src="\lovable-uploads\f8cc8309-39fc-49a7-b838-fe054c61a16d.png" 
+                src="/lovable-uploads/icons/logo_black.png" 
                 alt="GT GlobalTeam Logo" 
                 className="rounded-[50%] w-32 h-32 md:w-48 md:h-48 object-contain"
               />
