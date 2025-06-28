@@ -1,0 +1,109 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 44 62 80; /* dark-navy */
+    --foreground: 236 240 241; /* off-white */
+
+    --card: 52 73 94; /* shadow-gray */
+    --card-foreground: 236 240 241; /* off-white */
+
+    --popover: 52 73 94; /* shadow-gray */
+    --popover-foreground: 236 240 241; /* off-white */
+
+    --primary: 230 126 34; /* honey-gold */
+    --primary-foreground: 44 62 80; /* dark-navy */
+
+    --secondary: 52 73 94; /* shadow-gray */
+    --secondary-foreground: 236 240 241; /* off-white */
+
+    --muted: 52 73 94; /* shadow-gray */
+    --muted-foreground: 236 240 241; /* off-white */
+
+    --accent: 230 126 34; /* honey-gold */
+    --accent-foreground: 44 62 80; /* dark-navy */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 236 240 241; /* off-white */
+
+    --border: 52 73 94; /* shadow-gray */
+    --input: 52 73 94; /* shadow-gray */
+    --ring: 230 126 34; /* honey-gold */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 44 62 80; /* dark-navy */
+    --foreground: 236 240 241; /* off-white */
+
+    --card: 52 73 94; /* shadow-gray */
+    --card-foreground: 236 240 241; /* off-white */
+
+    --popover: 52 73 94; /* shadow-gray */
+    --popover-foreground: 236 240 241; /* off-white */
+
+    --primary: 230 126 34; /* honey-gold */
+    --primary-foreground: 44 62 80; /* dark-navy */
+
+    --secondary: 52 73 94; /* shadow-gray */
+    --secondary-foreground: 236 240 241; /* off-white */
+
+    --muted: 52 73 94; /* shadow-gray */
+    --muted-foreground: 236 240 241; /* off-white */
+
+    --accent: 230 126 34; /* honey-gold */
+    --accent-foreground: 44 62 80; /* dark-navy */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 236 240 241; /* off-white */
+
+    --border: 52 73 94; /* shadow-gray */
+    --input: 52 73 94; /* shadow-gray */
+    --ring: 230 126 34; /* honey-gold */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-cairo;
+    direction: rtl;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
