@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/1234567890?text=مرحبا، عايز أعرف أكتر عن خدمات السيرة الذاتية', '_blank');
+     window.open('https://wa.me/201031452115?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل', '_blank');
   };
 
   return (
