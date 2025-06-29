@@ -103,7 +103,7 @@ const FAQSection = () => {
             لسة عندك أسئلة تانية؟
           </p>
           <a 
-            href="https://wa.me/201022692258?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل"
+            href="https://wa.me/201031452115?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-honey-gold hover:text-[#d35400] font-cairo font-semibold transition-colors"
