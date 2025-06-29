@@ -85,7 +85,7 @@ const ServicesSection = () => {
               اختار الخدمة اللي تناسبك وخلينا نساعدك توصل لهدفك
             </p>
             <a 
-              href="https://wa.me/201031452115?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل"
+              href="https://wa.me/201031452115?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20الإحترافي%20وعايز%20أعرف%20التفاصيل"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center bg-honey-gold hover:bg-[#d35400] text-dark-navy font-cairo font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105"
