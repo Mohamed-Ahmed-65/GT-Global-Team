@@ -15,13 +15,14 @@ const Footer = () => {
 
           <div className="flex flex-wrap justify-center items-center space-x-6 space-x-reverse mb-4">
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/201031452115"
               target="_blank"
               rel="noopener noreferrer"
               className="text-off-white/80 hover:text-honey-gold transition-colors font-cairo"
             >
               واتساب
             </a>
+
             <a
               href="https://www.facebook.com/profile.php?id=61577780159397"
               target="_blank"
