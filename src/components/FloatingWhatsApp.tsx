@@ -36,9 +36,10 @@ const FloatingWhatsApp = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/1234567890?text=مرحبا، عايز أعرف أكتر عن خدماتكم', '_blank');
+     window.open('https://wa.me/201031452115?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل', '_blank');
     setShowTooltip(false);
   };
+
 
   const hideTooltip = () => {
     setShowTooltip(false);
