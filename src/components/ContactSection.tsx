@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ContactSection = () => {
   const handleWhatsApp = () => {
-    window.open('href="https://wa.me/201022692258?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل"', '_blank');
+    window.open('href="https://wa.me/‎201031452115?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل"', '_blank');
   };
   const handleFacebook = () => {
     window.open('https://www.facebook.com/profile.php?id=61577780159397', '_blank');
