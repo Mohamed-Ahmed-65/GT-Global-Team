@@ -65,7 +65,7 @@ const PricingSection = () => {
   const handleSelectPlan = (planName: string) => {
     const message = `مرحبا، عايز أشترك في باقة ${planName}`;
     window.open(
-      `https://wa.me/1234567890?text=${encodeURIComponent(message)}`,
+      `https://wa.me/201031452115?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   };
