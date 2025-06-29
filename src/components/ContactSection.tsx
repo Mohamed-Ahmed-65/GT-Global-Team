@@ -4,9 +4,14 @@ import { MessageSquare, Send, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ContactSection = () => {
-  const handleWhatsApp = () => {
-    window.open('href="https://wa.me/‎201031452115?text=مرحبًا،%20مهتم%20بخدمة%20تصميم%20CV%20احترافي%20وعايز%20أعرف%20التفاصيل"', '_blank');
-  };
+  
+const handleWhatsApp = () => {
+  const phone = "201031452115";
+  const message = "مرحبًا، مهتم بخدمة تصميم CV احترافي وعايز أعرف التفاصيل";
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+};
+
   const handleFacebook = () => {
     window.open('https://www.facebook.com/profile.php?id=61577780159397', '_blank');
   };
