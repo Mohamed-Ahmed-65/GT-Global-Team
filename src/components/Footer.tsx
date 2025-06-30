@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://www.facebook.com/profile.php?id=61577780159397"
+              href="https://www.facebook.com/profile.php?id=61578109641392"
               target="_blank"
               rel="noopener noreferrer"
               className="text-off-white/80 hover:text-honey-gold transition-colors font-cairo"
