@@ -13,7 +13,7 @@ const handleWhatsApp = () => {
 
 
   const handleFacebook = () => {
-    window.open('https://www.facebook.com/profile.php?id=61577780159397', '_blank');
+    window.open('https://www.facebook.com/profile.php?id=61578109641392', '_blank');
   };
 
   return (
