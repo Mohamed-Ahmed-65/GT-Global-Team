@@ -16,9 +16,25 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+
+        {/* ✅ Chatbot Iframe */}
+        <iframe
+          style={{
+            width: "400px",
+            height: "600px",
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            border: "none",
+            zIndex: 9999,
+          }}
+          src="https://app.fastbots.ai/embed/cmcqqu1zx19oyrily73fp3br7"
+          title="GT Chatbot"
+        ></iframe>
+        {/* ✅ End Chatbot */}
+        
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
