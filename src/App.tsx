@@ -22,8 +22,6 @@ const App = () => {
 
   const toggleBot = () => setShowBot((prev) => !prev);
 
-  const buttonSpace = 95;
-
   const chatContainerStyle = {
     position: "fixed",
     zIndex: 9999,
@@ -31,14 +29,15 @@ const App = () => {
     borderRadius: isMobile ? "0" : "16px",
     boxShadow: "0 8px 25px rgba(0,0,0,0.2)",
     overflow: "hidden",
-    transition: "bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-    willChange: "bottom",
-    bottom: showBot ? `${buttonSpace}px` : "-110vh",
+    transition: "transform 0.35s ease, opacity 0.3s ease",
+    transform: showBot ? "translateY(0)" : isMobile ? "translateY(100%)" : "translateY(120%)",
+    opacity: showBot ? 1 : 0,
+    bottom: isMobile ? "0" : "100px",
     right: isMobile ? "0" : "20px",
-    top: isMobile && showBot ? "0" : "auto",
+    top: isMobile ? "0" : "auto",
     left: isMobile ? "0" : "auto",
-    width: isMobile ? "auto" : "400px",
-    height: isMobile ? "auto" : "600px",
+    width: isMobile ? "100vw" : "400px",
+    height: isMobile ? "100vh" : "600px",
   };
 
   const toggleButtonStyle = {
