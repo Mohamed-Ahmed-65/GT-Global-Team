@@ -14,7 +14,6 @@ const App = () => {
   const [showBot, setShowBot] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Effect to detect screen size
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
@@ -23,10 +22,9 @@ const App = () => {
 
   const toggleBot = () => setShowBot((prev) => !prev);
 
-  // --- Style for the main chat container ---
   const chatContainerStyle = {
     position: "fixed",
-    bottom: showBot ? (isMobile ? "0" : "95px") : "-110vh", // Moves completely off-screen when hidden
+    bottom: showBot ? (isMobile ? "0" : "95px") : "-110vh",
     right: isMobile ? "0" : "20px",
     left: isMobile ? "0" : "auto",
     width: isMobile ? "100vw" : "400px",
@@ -41,7 +39,6 @@ const App = () => {
     willChange: "bottom",
   };
 
-  // --- Style for the SINGLE, UNIFIED toggle button ---
   const toggleButtonStyle = {
     position: "fixed",
     bottom: "20px",
@@ -53,13 +50,16 @@ const App = () => {
     color: "#fff",
     border: "none",
     cursor: "pointer",
-    zIndex: 10001, // Ensure it's on top of the chat window
+    zIndex: 10001,
     boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     transition: "transform 0.2s ease",
   };
+
+  // ✅ The corrected URL with the parameter to hide the internal button
+  const botSrcUrl = "https://app.fastbots.ai/embed/cmcqqu1zx19oyrily73fp3br7?button=hidden";
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -72,10 +72,9 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
 
-          {/* ✅ Chatbot Iframe Container */}
           <div style={chatContainerStyle}>
             <iframe
-              src="https://app.fastbots.ai/embed/cmcqqu1zx19oyrily73fp3br7"
+              src={botSrcUrl} // Use the corrected URL here
               title="GT Chatbot"
               style={{
                 width: "100%",
@@ -87,7 +86,6 @@ const App = () => {
             />
           </div>
 
-          {/* ✅ SINGLE Toggle Button for All Screens */}
           <button
             onClick={toggleBot}
             aria-label={showBot ? "Close Chatbot" : "Open Chatbot"}
@@ -95,7 +93,6 @@ const App = () => {
             onMouseDown={(e) => (e.currentTarget.style.transform = "scale(0.92)")}
             onMouseUp={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
-            {/* Simple and clean icon change */}
             {showBot ? <X size={28} /> : <MessageCircle size={28} />}
           </button>
 
