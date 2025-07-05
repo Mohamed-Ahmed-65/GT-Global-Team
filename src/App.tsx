@@ -22,6 +22,8 @@ const App = () => {
 
   const toggleBot = () => setShowBot((prev) => !prev);
 
+  const buttonSpace = 95;
+
   const chatContainerStyle = {
     position: "fixed",
     zIndex: 9999,
@@ -29,35 +31,35 @@ const App = () => {
     borderRadius: isMobile ? "0" : "16px",
     boxShadow: "0 8px 25px rgba(0,0,0,0.2)",
     overflow: "hidden",
-    transition: "transform 0.35s ease, opacity 0.3s ease",
-    transform: showBot ? "translateY(0)" : isMobile ? "translateY(100%)" : "translateY(120%)",
-    opacity: showBot ? 1 : 0,
-    bottom: isMobile ? "0" : "100px",
+    transition: "bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+    willChange: "bottom",
+    bottom: showBot ? `${buttonSpace}px` : "-110vh",
     right: isMobile ? "0" : "20px",
-    top: isMobile ? "0" : "auto",
+    top: isMobile && showBot ? "0" : "auto",
     left: isMobile ? "0" : "auto",
-    width: isMobile ? "100vw" : "400px",
-    height: isMobile ? "100vh" : "600px",
+    width: isMobile ? "auto" : "400px",
+    height: isMobile ? "auto" : "600px",
   };
 
   const toggleButtonStyle = {
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    width: "60px",
-    height: "60px",
-    borderRadius: "50%",
-    backgroundColor: "#F28500",
-    color: "#fff",
-    border: "none",
-    cursor: "pointer",
-    zIndex: 10001,
-    boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    transition: "transform 0.2s ease",
-  };
+  position: "fixed",
+  bottom: "20px",
+  right: "20px",
+  width: "60px",
+  height: "60px",
+  borderRadius: "50%",
+  backgroundColor: "#F28500",
+  color: "#fff",
+  border: "none",
+  cursor: "pointer",
+  zIndex: 10001,
+  boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  transition: "all 0.3s ease-in-out",
+  opacity: 1,
+};
 
   return (
     <QueryClientProvider client={queryClient}>
