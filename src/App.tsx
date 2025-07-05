@@ -22,21 +22,23 @@ const App = () => {
 
   const toggleBot = () => setShowBot((prev) => !prev);
 
+  const buttonSpace = 95;
+
   const chatContainerStyle = {
     position: "fixed",
-    bottom: showBot ? (isMobile ? "0" : "95px") : "-110vh",
-    right: isMobile ? "0" : "20px",
-    left: isMobile ? "0" : "auto",
-    width: isMobile ? "100vw" : "400px",
-    height: isMobile ? "100vh" : "600px",
-    maxHeight: "85vh",
+    zIndex: 9999,
+    backgroundColor: "#fff",
     borderRadius: isMobile ? "0" : "16px",
     boxShadow: "0 8px 25px rgba(0,0,0,0.2)",
     overflow: "hidden",
-    zIndex: 9999,
-    backgroundColor: "#fff",
     transition: "bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     willChange: "bottom",
+    bottom: showBot ? `${buttonSpace}px` : "-110vh",
+    right: isMobile ? "0" : "20px",
+    top: isMobile && showBot ? "0" : "auto",
+    left: isMobile ? "0" : "auto",
+    width: isMobile ? "auto" : "400px",
+    height: isMobile ? "auto" : "600px",
   };
 
   const toggleButtonStyle = {
@@ -58,9 +60,6 @@ const App = () => {
     transition: "transform 0.2s ease",
   };
 
-  // ✅ The corrected URL with the parameter to hide the internal button
-  const botSrcUrl = "https://app.fastbots.ai/embed/cmcqqu1zx19oyrily73fp3br7?button=hidden";
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -74,7 +73,7 @@ const App = () => {
 
           <div style={chatContainerStyle}>
             <iframe
-              src={botSrcUrl} // Use the corrected URL here
+              src="https://app.fastbots.ai/embed/cmcqqu1zx19oyrily73fp3br7"
               title="GT Chatbot"
               style={{
                 width: "100%",
@@ -95,7 +94,6 @@ const App = () => {
           >
             {showBot ? <X size={28} /> : <MessageCircle size={28} />}
           </button>
-
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
