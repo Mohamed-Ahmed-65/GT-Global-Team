@@ -10,6 +10,7 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <iframe	style="width: 400px; height: 600px;" src="https://app.fastbots.ai/embed/cmcqqu1zx19oyrily73fp3br7"></iframe>
     <TooltipProvider>
       <Toaster />
       <Sonner />
